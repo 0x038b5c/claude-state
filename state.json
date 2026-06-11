@@ -1,4 +1,8 @@
 {
     "active": true,
-    "project": null
+    "project": {
+        "name": "test-project",
+        "repo": "https://github.com/0x038b5c/test-project.git",
+        "handoff": "projects/test-project.md"
+    }
 }
