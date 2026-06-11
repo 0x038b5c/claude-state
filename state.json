@@ -1,9 +1,4 @@
 {
     "active": true,
-    "project": {
-        "name": "calc-repl",
-        "repo": "https://github.com/0x038b5c/calc-repl.git",
-        "updated_at": "2026-06-11T00:00:00Z",
-        "handoff": "projects/calc-repl.md"
-    }
+    "project": null
 }
