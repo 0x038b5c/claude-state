@@ -16,12 +16,13 @@ Reviewing and improving the claude-loader and claude-payload repos
 - Removed check=True from run() in both claude-loader and claude-payload (was swallowing error output)
 - Added `apt-get update || true` before apt install in payload (fixes stale package version 404)
 - Pushed both fixes to GitHub (claude-loader and claude-payload repos)
+- Restructured context.md with XML tags (<static_context>, <state_repository>, <resuming_work>, <projects>, <file_schemas>, <state_discipline>)
+- Restructured main.py stdout as XML blocks (<provisioning>, <static_context> via context.md, <dynamic_context> with <active_project> and <active_task>)
 
 ## What's in flight
 - N/A
 
 ## What's next
-- context.md review — user wants to improve wording, ordering, formatting (considering XML blocks like <my_context>)
 - Remaining suggestions not yet acted on:
   - sops is installed but unused — remove or document intent
   - git user.email is claude@anthropic.com — consider a throwaway address
