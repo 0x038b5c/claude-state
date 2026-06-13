@@ -1,5 +1,5 @@
 ## What I was doing
-Initialized project test-project
+Initialized project har-analyzer
 
 ## What's done
 - Created repository and scaffolded project structure
