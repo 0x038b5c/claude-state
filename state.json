@@ -1,8 +1,8 @@
 {
     "active": true,
     "project": {
-        "name": "har-analyzer",
-        "repo": "https://github.com/0x038b5c/har-analyzer.git",
-        "handoff": "projects/har-analyzer.md"
+        "name": "claude-setup",
+        "repo": "https://github.com/0x038b5c/claude-setup.git",
+        "handoff": "projects/claude-setup.md"
     }
 }

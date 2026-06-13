@@ -1,0 +1,3 @@
+## claude-setup
+
+Project initialized.
