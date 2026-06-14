@@ -1,14 +1,17 @@
 ## What I was doing
-Integrating claude-setup, claude-loader, and claude-payload so the full system works end-to-end with parameterized, per-user provisioning.
+Integrating claude-setup, loader, and payload so the full chain works for any github_username
 
 ## What's done
-- Read all three repos (claude-setup, loader skill, claude-payload) in full
-- Identified all hardcoded references and structural mismatches
-- Confirmed .gitignore on claude-setup is already correct (no egg/pyc junk in history)
-- Built the integration plan
+- Audited all three repos end-to-end
+- Confirmed .gitignore on claude-setup is already correct (no egg/pyc junk)
+- Confirmed loader templates (mode A/B) already pass github_username to payload
+- Wrote integration plan to claude-setup/docs/superpowers/plans/2026-06-13-loader-payload-integration.md
+- Updated CLAUDE.md and .claude/todo.md in claude-setup
 
 ## What's in flight
-- Writing the integration plan to claude-setup project
 
 ## What's next
-- Execute the plan: parameterize payload, update loader templates, wire up setup
+- Execute plan Step A: parameterize claude-payload/src/main.py (sys.argv[1], write /opt/github_username)
+- Execute plan Step B: parameterize claude-payload/src/tool.py (read /opt/github_username)
+- Execute plan Step C: add .gitignore to claude-payload
+- Commit and push claude-payload
