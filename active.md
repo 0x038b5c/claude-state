@@ -1,20 +1,19 @@
 ## What I was doing
-Integrating claude-setup, loader, and payload so the full chain works for any github_username
+Implementing round-2 feedback on claude-setup, claude-loader, claude-payload
 
 ## What's done
-- Audited all three repos end-to-end
-- Confirmed .gitignore on claude-setup is already correct
-- Confirmed loader templates (mode A/B) already pass github_username to payload
-- Wrote integration plan to claude-setup/docs/superpowers/plans/2026-06-13-loader-payload-integration.md
-- Updated CLAUDE.md and .claude/todo.md in claude-setup
-- Parameterized claude-payload/src/main.py (writes /opt/github_username)
-- Parameterized claude-payload/src/tool.py (reads /opt/github_username)
-- Added .gitignore to claude-payload
-- Switched claude-payload/src/main.py entrypoint from sys.argv to Click
-- Updated claude-loader/src/main.py to pass github_username to payload (fixes no-arg invocation)
+- Audited all three repos
+- Parameterized payload (github_username via argv)
+- Full integration plan written
 
 ## What's in flight
+- Round-2 refactor:
+  - Loader: no hardcoded username/UUIDs — only age key baked in; UUID/config_repo or username/payload_repo come from Claude's instructions
+  - SKILL.md: parameterized invocation
+  - Config: github_username global default, secret file name defaults, git_signing_format, git_author
+  - Payload: consume new config fields
+  - Wizard: ask about gh, signing format, git author, repos as dirs/git repos
+  - Repos: non-gh fallback as initialized git dirs instead of zips
 
 ## What's next
-- (Optional) Update claude-setup/CLAUDE.md with full project structure notes
-- Verify end-to-end by running claude-setup wizard for a test user
+- Commit and push all three repos
